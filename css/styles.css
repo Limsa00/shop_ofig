@@ -1,0 +1,95 @@
+/*
+- Rouge : `#c80000`
+- Gris foncé : `#333`
+- Gris clair (bordures et catégorie): `#ccc`
+*/
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    /* width: 750px; */
+    margin: 0 auto;
+}
+
+/* HEADER */
+h1{
+    background-color: #c80000;
+    padding: 1rem;
+    color: white;
+    font-size: 1.8rem;
+}
+
+dfn{
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+}
+
+h2{
+    background-color: #333;
+    padding: 0.5rem;
+    text-align: center;
+    color: white;
+}
+
+em{
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+/* FOOTER */
+footer{
+    background-color: #333;
+    color: white;
+    padding: 0.5rem 0 1rem 0;
+    text-align: center;
+}
+
+/* MAIN */
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+article{
+    border: 1px solid #ccc;
+    margin: 0.5rem;
+    max-width: 25%;
+    padding: 0.5rem;
+}
+
+img{
+    max-width: 70%;
+    display: block;
+    margin: 0 auto;
+}
+
+h3, h4, a p{
+    margin: 0.5rem 0; 
+}
+
+h3{
+    color: #ccc;
+    text-transform: uppercase;
+    border-bottom: #ccc solid 2px;
+    font-size: 0.7rem;
+}
+
+h4{
+    font-weight: bold;
+}
+
+article>p{
+    font-size: 0.8rem;
+}
+
+.character__action{
+    display: flex;
+    background-color: #c80000;
+    justify-content: space-between;
+    text-decoration: none;
+    color: white;
+    font-size: 0.7rem;
+    padding: 0 0.5rem;
+    margin: 0.5rem 0;
+}
