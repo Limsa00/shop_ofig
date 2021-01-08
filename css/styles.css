@@ -1,8 +1,29 @@
-/*
-- Rouge : `#c80000`
-- Gris foncé : `#333`
-- Gris clair (bordures et catégorie): `#ccc`
-*/
+/* ANIMATIONS */
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes pop {
+    0% {
+        opacity: 0;
+        transform: translateY(-2rem);
+    }
+    /* 50% {
+
+    } */
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* GENERAL */
 
 html{
     font-family: Arial, Helvetica, sans-serif;
@@ -12,11 +33,25 @@ html{
 }
 
 /* HEADER */
+
+h1, h2{
+    animation: pop 0.7s 1 0s;
+}
+
+main{
+    animation: pop 1s 1 0s backwards;
+}
+
 h1{
     background-color: #c80000;
     padding: 1rem;
     color: white;
     font-size: 1.8rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
 }
 
 dfn{
@@ -29,6 +64,7 @@ h2{
     padding: 0.5rem;
     text-align: center;
     color: white;
+    margin-top: 3.7rem;
 }
 
 em{
@@ -56,6 +92,7 @@ article{
     margin: 0.5rem;
     max-width: 25%;
     padding: 0.5rem;
+    position: relative;
 }
 
 img{
@@ -93,3 +130,48 @@ article>p{
     padding: 0 0.5rem;
     margin: 0.5rem 0;
 }
+
+.character__action:hover{
+    background-color: grey;
+}
+
+p{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.old_price{
+    text-decoration: line-through;
+    font-size: 0.7rem;
+}
+
+.promo{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 2px solid lightgrey;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    animation: blink 0.5s infinite alternate;
+}
+
+.soldes{
+    left: 0;
+    top: 50%;
+    position: fixed;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    background-color: #c80000;
+    padding: 0.5rem;
+    border-radius: 5px;
+    color: white;
+    /* animation: blink 0.5s infinite alternate; */
+}
+
